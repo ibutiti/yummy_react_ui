@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const ROOT_URL = 'https://yrecipes-api.herokuapp.com/api/v1';
-const ROOT_URL = 'http://localhost:5000/api/v1';
+const ROOT_URL = 'https://yrecipes-api.herokuapp.com/api/v1';
+// const ROOT_URL = 'http://localhost:5000/api/v1';
 const LOGIN_URL = '/auth/login';
 const SIGN_UP_URL = '/auth/register';
 const CATEGORY_URL = '/category/';
