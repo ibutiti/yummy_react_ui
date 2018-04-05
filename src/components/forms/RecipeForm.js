@@ -19,14 +19,12 @@ class RecipeForm extends Component {
 
   // method to capture and store form input
   onChange = e => {
-    console.log('event', e.target.name);
     this.setState({
       data: { ...this.state.data, [e.target.name]: e.target.value }
     });
   };
 
   onSelect = (e, { value }) => {
-    console.log('event', e.id, 'value', value);
     this.setState({
       data: { ...this.state.data, category_id: value }
     });
@@ -89,7 +87,6 @@ class RecipeForm extends Component {
           value: category.id
         });
       });
-      console.log('options', this.props.categories);
       return selectOptions;
     };
     const selectOptions = options();

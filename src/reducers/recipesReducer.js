@@ -14,8 +14,10 @@ export function recipes(state = {}, action = {}) {
       list.data = _.mapKeys(action.data.data, 'id');
       return list;
     case RECIPE_CREATED:
+      console.log('action', action, state);
       const newState = { ...state };
       newState.data[action.data.new_recipe.id] = action.data.new_recipe;
+      console.log('new state', state);
       return newState;
     case RECIPE_EDITED:
       const editedState = { ...state };

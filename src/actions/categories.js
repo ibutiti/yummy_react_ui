@@ -37,7 +37,6 @@ const categoriesFetched = response => ({
 
 export const fetchCategories = (page, limit, apiKey) => dispatch =>
   api.categories.fetchCategories(page, limit, apiKey).then(response => {
-    console.log(response);
     dispatch(categoriesFetched(response));
   });
 
