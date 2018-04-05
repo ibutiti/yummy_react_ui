@@ -23,6 +23,12 @@ describe('<LoginForm>', () => {
     onSubmit: jest.fn(),
     onChange: jest.fn()
   };
+  const preventDefault = jest.fn();
+  const component = mount(
+    <Provider store={store}>
+      <LoginForm {...props} />
+    </Provider>
+  );
 
   // test it renders without crashing
   it('should render without crashing', () => {
@@ -31,5 +37,9 @@ describe('<LoginForm>', () => {
         <LoginForm {...props} />
       </Provider>
     );
+  });
+  it('executes a submit on form', () => {
+    expect(component.find('form').length).toBe(1);
+    expect(component.find('form').simulate('submit', { preventDefault }));
   });
 });

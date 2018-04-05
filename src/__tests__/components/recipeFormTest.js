@@ -8,11 +8,11 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 
-import CategoryForm from '../../components/forms/CategoryForm';
+import RecipeForm from '../../components/forms/RecipeForm';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('<CategoryForm>', () => {
+describe('<RecipeForm>', () => {
   const store = configureMockStore([thunk])({
     categories: {}
   });
@@ -30,12 +30,24 @@ describe('<CategoryForm>', () => {
     errors: {}
   };
 
+  const preventDefault = jest.fn();
+  const component = mount(
+    <Provider store={store}>
+      <RecipeForm {...props} />
+    </Provider>
+  );
+
   // test it renders without crashing
   it('should render without crashing', () => {
     const { enzymeWrapper } = mount(
       <Provider store={store}>
-        <CategoryForm {...props} />
+        <RecipeForm {...props} />
       </Provider>
     );
+  });
+
+  it('executes a submit on form', () => {
+    expect(component.find('form').length).toBe(1);
+    expect(component.find('form').simulate('submit', { preventDefault }));
   });
 });

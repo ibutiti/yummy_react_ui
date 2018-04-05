@@ -21,7 +21,12 @@ describe('<SignUpForm>', () => {
     onSubmit: jest.fn(),
     onChange: jest.fn()
   };
-
+  const preventDefault = jest.fn();
+  const component = mount(
+    <Provider store={store}>
+      <SignUpForm {...props} />
+    </Provider>
+  );
   // test it renders without crashing
   it('should render without crashing', () => {
     const { enzymeWrapper } = mount(
@@ -29,5 +34,10 @@ describe('<SignUpForm>', () => {
         <SignUpForm {...props} />
       </Provider>
     );
+  });
+
+  it('executes a submit on form', () => {
+    expect(component.find('form').length).toBe(1);
+    expect(component.find('form').simulate('submit', { preventDefault }));
   });
 });
