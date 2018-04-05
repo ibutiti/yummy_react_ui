@@ -1,0 +1,16 @@
+.recipe-icons div {
+  display: inline;
+}
+
+.recipe-description {
+  height: 70px;
+}
+
+.category-modal-icon {
+  margin-top: 10px;
+}
+
+.modal1-margin {
+  margin-top: 180px !important;
+  margin-left: 350px !important;
+}

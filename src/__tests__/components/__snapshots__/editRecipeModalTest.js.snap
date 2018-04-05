@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EditRecipeModal> renders fully 1`] = `
+<div>
+  <i
+    aria-hidden="true"
+    className="edit small icon"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  />
+</div>
+`;

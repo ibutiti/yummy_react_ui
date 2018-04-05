@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopNavigation> renders fully 1`] = `
+<div
+  className="ui pointing secondary menu"
+>
+  <a
+    className="item"
+    href="/dashboard"
+    onClick={[Function]}
+  >
+    Dashboard
+  </a>
+  <div
+    className="right menu"
+    style={
+      Object {
+        "marginTop": "10px",
+      }
+    }
+  >
+    <div
+      aria-busy={undefined}
+      aria-disabled={undefined}
+      aria-expanded={false}
+      aria-multiselectable={undefined}
+      className="ui dropdown"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="listbox"
+      tabIndex={0}
+    >
+      <span>
+        abc
+      </span>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        className="menu transition"
+      >
+        <div
+          aria-checked={undefined}
+          aria-disabled={undefined}
+          aria-selected={undefined}
+          className="item"
+          onClick={[Function]}
+          role="option"
+        >
+          Logout
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

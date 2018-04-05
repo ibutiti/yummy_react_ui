@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewRecipeModal> renders fully 1`] = `
+<div>
+  <span
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <i
+      aria-hidden="true"
+      className="add circle icon category-modal-icon"
+    />
+    Add a Recipe
+  </span>
+</div>
+`;
