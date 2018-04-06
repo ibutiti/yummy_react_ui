@@ -79,9 +79,7 @@ class RecipesList extends Component {
             Created <Moment fromNow>{recipe.created_on}</Moment>
           </Item.Meta>
           <Item.Description className="recipe-description">
-            {recipe.content.length < 300
-              ? recipe.content
-              : `${recipe.content.substring(0, 300)}...`}
+            {recipe.content}
           </Item.Description>
           <Item.Extra>
             <span className="recipe-icons">

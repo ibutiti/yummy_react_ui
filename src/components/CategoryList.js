@@ -73,12 +73,11 @@ class CategoryList extends Component {
           <Table.Footer>
             <Table.Row>
               <Table.HeaderCell colSpan="3">
+                {console.log(this.state)}
                 <Pagination
                   floated="right"
                   activePage={this.state.activePage}
-                  totalPages={
-                    !_.isEmpty(this.state.categories) ? links.total_pages : 1
-                  }
+                  totalPages={!_.isEmpty(links) ? links.total_pages : 1}
                   onPageChange={this.handlePaginationChange}
                   siblingRange={1}
                   boundaryRange={0}
